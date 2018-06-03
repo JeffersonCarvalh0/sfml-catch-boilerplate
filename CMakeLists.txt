@@ -14,9 +14,9 @@ list(REMOVE_ITEM SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp)
 file(GLOB HEADER_FILES "include/*.h")
 
 # Main executable
-add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${MAIN_FILE} ${HEADER_FILES})
-target_include_directories(${PROJECT_NAME} PRIVATE ${HEADER_DIRECTORY})
-target_link_libraries(${PROJECT_NAME} ${SFML_LIBRARIES})
+add_executable(main ${SOURCE_FILES} ${MAIN_FILE} ${HEADER_FILES})
+target_include_directories(main PRIVATE ${HEADER_DIRECTORY})
+target_link_libraries(main ${SFML_LIBRARIES})
 
 # Tests executable
 file(GLOB TESTS "test/*.cpp")
