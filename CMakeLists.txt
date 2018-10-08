@@ -15,7 +15,7 @@ file(GLOB HEADER_FILES "include/*.h")
 
 # Main executable
 add_executable(main ${SOURCE_FILES} ${MAIN_FILE} ${HEADER_FILES})
-target_include_directories(main PRIVATE ${HEADER_DIRECTORY})
+target_include_directories(main PRIVATE ${HEADER_DIRECTORY} ${SFML_INCLUDE_DIR})
 target_link_libraries(main ${SFML_LIBRARIES})
 
 # Tests executable
